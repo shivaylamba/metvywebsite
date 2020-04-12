@@ -64,6 +64,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+.footer-logo1{
+  max-width: 45%;
+  height: auto;
+}
 p {
   margin: 0 0 26px;
 }
@@ -1184,7 +1188,7 @@ blockquote i:before {
   width: 100%;
 }
 .rs-main-slider .item.gap-pt {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 .rs-main-slider .btm-date {
   color: #fff;
