@@ -231,38 +231,28 @@ ul {
   box-shadow: 0 15px 30px rgba(34, 34, 34, 0.03);
 }
 .gradient-bg {
-  background: linear-gradient(-41deg, #09c778, #01a0f9);
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);
 }
 .gradient-bg-hover {
-  background: linear-gradient(41deg, #09c778, #01a0f9);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg2 {
-  background: linear-gradient(-90deg, #1292c2, #00aeef);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg2-hover {
-  background: linear-gradient(90deg, #1292c2, #00aeef);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg3 {
-  background: linear-gradient(-150deg, #12b4c8, #6669e6);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg3-hover {
-  background: linear-gradient(150deg, #12b4c8, #6669e6);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg-section {
-  background: linear-gradient(0deg, #01a0f9, #09c778);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg2-section {
-  background: linear-gradient(0deg, #00aeef, #1292c2);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg3-section {
-  background: linear-gradient(90deg, #6669e6, #12b4c8);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg-icon {
-  background: linear-gradient(0deg, #09c778, #01a0f9);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg2-icon {
-  background: linear-gradient(0deg, #1292c2, #00aeef);
-}
+  background: linear-gradient(-41deg, #00f2c3, #65ffda);}
 .gradient-bg3-icon {
   background: linear-gradient(0deg, #6669e6, #12b4c8);
 }

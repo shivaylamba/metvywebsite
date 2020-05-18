@@ -43,6 +43,21 @@
             <div class="loader">
                 <div class="animate3">
                     <img src="images/metvy.png" style="height : 20% ; width : 20%"alt="Preloader Image animate3">
+                   <br><br> 
+                    <p style = "color : white"id="pp">
+
+                        </p>
+                    <script>
+                        var strarray = new Array(" Networking is an enrichment program, not an entitlement program.","The richest people in the world look for and build networks, everyone else looks for work. Marinate on that for a minute.","Courage starts with showing up and letting ourselves be seen.","  Your network is your net-worth”");
+
+                        
+                        
+                        randomnum = Math.round(Math.random()*2);
+                        para = document.getElementById('pp');
+                        
+                        para.innerHTML = strarray[randomnum]
+                        
+                        </script>
                 </div>
             </div>
         </div>
@@ -1117,7 +1132,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                     <textarea placeholder="Your Message Here" rows="5" id="message" name="message" required></textarea>
                                 </div>
                                 <div class="form-button">
-                                    <button type="submit">Submit Now !</button>
+                                    <button >Submit Now !</button>
                                 </div>
                             </form>
                         </div> 
