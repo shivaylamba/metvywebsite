@@ -1,0 +1,750 @@
+<html>
+
+<head>
+    <style>
+        a {
+            color: #4b35ef;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-danger {
+            background-color: #d71149;
+            border-color: #d71149;
+        }
+
+        .card {
+            border: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+
+        b {
+            font-weight: 700;
+        }
+
+        .btn-group-lg>.btn,
+        .btn-lg {
+            border-radius: none;
+        }
+
+        .pagecontainer__root {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container__header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+            position: sticky;
+            top: 0;
+            z-index: 4;
+        }
+
+        .nav__appbar {
+            min-height: 4rem;
+            padding: .65rem 0;
+        }
+
+        .wrapper__header {
+            height: 100%;
+            z-index: 14;
+            align-items: center;
+            display: flex;
+        }
+
+        .content__container {
+            height: 100%;
+            max-width: calc(1440px + 12rem);
+        }
+
+        @media only screen and (min-width:75rem) {
+            .content__container {
+                padding-left: 6rem;
+                padding-right: 6rem;
+            }
+        }
+
+        .content__wrapper {
+            width: 100%;
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+        }
+
+        .section__content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
+
+        }
+
+        .section__left {
+            flex: 1 1;
+        }
+
+        .header__list {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .tab__link {
+            color: #19191a;
+        }
+
+        .tab__link:hover {
+            text-decoration: none;
+            cursor: pointer;
+            color: #6400e4;
+        }
+
+        .tab__logo {
+            margin-left: -2.375rem;
+        }
+
+        .image__header {
+            height: 1.6875rem;
+            margin-bottom: .25rem;
+        }
+
+        .desktop__view {
+            display: inherit;
+        }
+
+        .header__list li {
+            padding-left: 2.375rem;
+            list-style-type: none;
+        }
+
+        .section__right {
+            justify-content: flex-end;
+            flex: 1 1;
+        }
+
+        .basic__button {
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .basic__button:active {
+            background-image: none;
+            outline: 0;
+        }
+
+        .basic__button:active:focus,
+        .basic__button:focus {
+            outline: none;
+        }
+
+        .basic__button:focus,
+        .basic__button:hover:focus {
+            text-decoration: none;
+        }
+
+        .btn__medium {
+            display: inline-flex;
+            justify-content: center;
+            font-weight: 700;
+            border-radius: 2px;
+            -moz-user-select: none;
+            padding: .375rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            min-width: 8rem;
+            transition: all .1s ease-in-out;
+        }
+
+        .btn_purple {
+            color: #fff;
+            background-color: #6400e4;
+            border-color: transparent;
+        }
+
+        .btn_purple:active,
+        .btn_purple:hover {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn_purple:active {
+            color: #e6e6e6;
+            background-color: #5000b6;
+        }
+
+        .btn_purple:focus {
+            box-shadow: 0 0 0 3px rgba(100, 0, 228, .5);
+        }
+
+        .btn_purple.btn_outline__purple {
+            color: #6400e4;
+            background-color: transparent;
+            border: 1px solid #6400e4;
+        }
+
+        .btn_purple.btn_outline__purple:hover {
+            background-color: rgba(100, 0, 228, .1);
+            box-shadow: none;
+        }
+
+        .btn_purple.btn_outline__purple:active {
+            background-color: rgba(100, 0, 228, .4);
+            box-shadow: none;
+        }
+
+        .register__btn {
+            padding: 0;
+        }
+
+        .container__main-page {
+            max-width: 90rem !important;
+            margin: auto;
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            position: relative;
+        }
+
+        @media only screen and (min-width:48rem) {
+            .container__main-page {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem
+            }
+        }
+
+        @media only screen and (min-width:64rem) {
+            .container__main-page {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        .main__content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media only screen and (min-width:48rem) {
+            .main__content {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .spacer__container {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .pageHeading__h1 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .form__container {
+            max-width: 96vw;
+            width: 22rem;
+        }
+
+        .container__content-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 22rem;
+        }
+
+        .flex__style {
+            display: flex;
+        }
+
+        .col__style {
+            flex-direction: column;
+        }
+
+        .login-form__style {
+            text-align: left;
+            padding-bottom: 1rem;
+        }
+
+        .form__base {
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .screenRead__style {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+            border: 0;
+        }
+
+        .form__group1 {
+            width: 100%;
+        }
+
+        .form__group2 {
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        .form__group3 {
+            margin-bottom: 1rem;
+        }
+
+        .label__formGroup {
+            display: block;
+            font-weight: 700;
+            margin-bottom: .5rem;
+            line-height: 1.25rem;
+        }
+
+        .label__formGroup label {
+            font-size: .9rem !important;
+        }
+
+        .input__formGroup {
+            font-size: 1rem;
+            text-indent: .8rem;
+            padding: .8rem 0;
+            outline: none;
+            width: 100%;
+            border: 1px solid #e9eaea;
+            border-radius: 2px;
+            transition: border-color .15s;
+            font-weight: 400;
+            box-sizing: border-box;
+        }
+
+        .input__formGroup:focus {
+            border-color: #4c7ef3;
+        }
+
+        .padBottom__IfNotEmpty {
+            text-align: left;
+        }
+
+        .container__forgot {
+            position: relative;
+            width: 100%;
+        }
+
+        .forgot__style {
+            font-size: .9rem;
+            color: #2e4a99 !important;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .btn__lg {
+            display: inline-flex;
+            justify-content: center;
+            font-weight: 700;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            -moz-user-select: none;
+            padding: .375rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            min-width: 8rem;
+            transition: all .1s ease-in-out;
+        }
+
+        .btn__royalblue {
+            color: #fff;
+            background-color: #4b35ef;
+            border-color: transparent;
+        }
+
+        .btn__royalblue:active {
+            color: #e6e6e6;
+            background-color: #3c2abf;
+        }
+
+        .btn__royalblue:active,
+        .btn__royalblue:hover {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn__royalblue:focus {
+            box-shadow: 0 0 0 3px rgba(75, 53, 239, .5);
+        }
+
+        .btn__xlarge {
+            padding: .75rem 1.25rem;
+            font-size: 1.25rem;
+            line-height: 1.33333;
+            min-width: 10rem;
+        }
+
+        .btn__submit {
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        button:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+
+        .heading__2 {
+            font-family: MuseoSans;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btnContainer__social {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btnContainer__ListItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 auto;
+        }
+
+        .btnContainer__ListItem+.btnContainer__ListItem {
+            margin-left: .5rem;
+        }
+
+        .btn__x-sm {
+            display: inline-flex;
+            justify-content: center;
+            font-weight: 700;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            -moz-user-select: none;
+            padding: .375rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            min-width: 8rem;
+            transition: all .1s ease-in-out;
+        }
+
+        .btn__red {
+            color: #fff;
+            background-color: #f65a5b;
+            border-color: transparent;
+        }
+
+        .btn__red:focus {
+            box-shadow: 0 0 0 3px rgba(246, 90, 91, .5);
+        }
+
+        .btn__red:active {
+            color: #e6e6e6;
+            background-color: #c54849;
+        }
+
+        .btn__red:active,
+        .btn__red:hover {
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn__social {
+            transition: box-shadow .3s;
+            margin-bottom: .5rem;
+            background-color: #fff;
+            color: #5a5b5e;
+            padding: .5rem 1rem;
+            text-align: left;
+            border: 2px solid #e9eaea;
+            display: block;
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn__social:active,
+        .btn__social:focus,
+        .btn__social:hover {
+            border: 2px solid #e9eaea;
+            color: #5a5b5e;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(212, 213, 214, .6);
+        }
+
+        .icon__social {
+            transition: transform .3s ease-in;
+            transition: transform .3s ease-in;
+            width: 1.5rem;
+        }
+
+        .outLink__register {
+            text-align: right;
+            display: block;
+            color: #6400e4;
+        }
+
+        .outLink__register:focus,
+        .outLink__register:hover {
+            color: #5900cb;
+        }
+
+        .footer__page {
+            /* background-color: #15141f; */
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            color: hsla(0, 0%, 100%, .6);
+            width: 100%;
+        }
+
+        .footer__page a {
+            color: hsla(0, 0%, 100%, .6) !important;
+        }
+
+        .footer__page li {
+            color: hsla(0, 0%, 100%, .6);
+        }
+
+        .container__styles {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media only screen and (min-width:48rem) {
+            .container__styles {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+
+            .container__styles>div {
+                margin-bottom: 0;
+            }
+
+            .container__styles>div:nth-of-type(2) {
+                justify-content: center;
+            }
+        }
+
+        .container__styles>div:first-of-type,
+        .container__styles>div:last-of-type {
+            flex-basis: 25%;
+        }
+
+        .container__styles>div {
+            margin-bottom: 1.5rem;
+        }
+
+        .container__styles>div:nth-of-type(2) {
+            flex-basis: 50%;
+            display: flex;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .linkList__styles {
+            display: flex;
+            flex-direction: column;
+            justify-self: end;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .linkList__styles a {
+            color: #141c3a;
+        }
+
+        @media only screen and (min-width:48rem) {
+            .linkList__styles {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .linkList__styles>li+li {
+                margin-left: 3rem;
+            }
+        }
+
+        .social__listStyles {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+            height: 100%;
+        }
+
+        .social__listStyles li+li {
+            margin-left: 1.5rem;
+        }
+
+        @media only screen and (min-width:48rem) {
+            .social__listStyles {
+                justify-content: flex-end;
+            }
+        }
+
+        .fullWidth {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: initial;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 32%;
+            right: 55%;
+            width: 30%;
+            top: -15%;
+            z-index: 20;
+
+        }
+
+
+        img {
+            position: relative;
+            z-index: 1000;
+            top: 10%;
+            left: 4%;
+        }
+
+
+        @font-face {
+            font-family: snapbold;
+            src: url('snapbold.otf');
+        }
+
+        @font-face {
+            font-family: snapdemi;
+            src: url('snapdemi.otf');
+        }
+
+        h6 {
+            font-family: snapbold;
+        }
+
+        p {
+            font-family: snapdemi;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <div class="row fullWidth"
+            style="background-image: linear-gradient(to right,#58d68d, #33F7D0);height: 120px;  border-top-left-radius: 50px ; border-top-right-radius: 50px ;">
+            <img src="https://i.imgur.com/MJPhfNw.png" width="70px"  />
+
+
+
+        </div>
+        <div class="row fullWidth" style="width : 100%; background-color: #fff">
+            <br><br><br><br><br><br>
+            <p>Hi! This is Shawrya, and I welcome you to the <strong><b><u>
+                            <font color="#58d68d">Metvy</font>
+                        </u></b></strong> family! </p>
+
+            <p>Ever felt like just smiling at people who try to figure you out, when you can't even figure yourself out?
+                Yeah, been there done that.<br> But here at <strong><b><u>
+                            <font color="#58d68d">Metvy</font>
+                        </u></b></strong>, we have the perfect solution for you, that is our intuitive AI technology,
+                which helps you find just the kind of people you're looking for.
+                Skip the small talk by putting in your professional skills, talents, interests, or hobbies and let the
+                robots do the match making!
+            </p>
+            <br>
+            <p> We are the one platform you need for all your networking needs. Stay connected, you might just find your
+                perfect partner- in business or otherwise.</p>
+            <!-- <img style="padding: 10px ; border-top-left-radius: 50px ; border-top-right-radius: 50px ;;" src="./assets/img/pic.png" width="20%" height = "34%"/> -->
+            <p>Click here to verify your email:
+            </p>
+            <button
+                style="padding: 10px 60px ; background:linear-gradient(to right , rgba(88, 214, 141, 0.6) , rgba(51, 247, 208 ,0.8)) ; border: none ; border-radius: 5px ; box-shadow: inset 0 0 1px #000 ; color: #fff "><b>
+                    Verify Email</b></button>
+
+            <p>
+                Thanks! Gotta keep the interface safe from spambots and all that.
+            </p>
+        </div>
+        <div class="footer"
+            style="background-image: linear-gradient(to right,#58d68d, #33F7D0); border-bottom-left-radius: 50px ; border-bottom-right-radius: 50px ;">
+            <footer class="footer__page"
+                style="width :100%; border-bottom-left-radius: 50px ; border-bottom-right-radius: 50px ;">
+                <div class="container__main-page container__styles">
+                    <div data-testid="footer-logo"><a href="http://metvy.com"><img src="https://i.imgur.com/MJPhfNw.png"
+                                viewBox="0 0 285 60" width="60" height="70">
+
+                            </img></a></div>
+                    <div style="width : 80%">
+                        <ul class="linkList__styles">
+                            <li>© Metvy 2019</li>
+                            <li><a href="#" data-testid="footer-jobs-link">Unsubscribe</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <br>
+                        <ul class="social__listStyles" data-testid="footer-social">
+                            <li><a href="https://www.linkedin.com/company/metvynetworking"><svg
+                                        xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20">
+                                        <title>LinkedIn</title>
+                                        <path fill="rgba(255, 255, 255, 0.6)"
+                                            d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z">
+                                        </path>
+                                    </svg></a></li>
+                            <li><a href="https://www.facebook.com/metvyapp"><svg width="18" height="18"
+                                        viewBox="0 0 18 18" xmlns="https://www.w3.org/2000/svg">
+                                        <title>Facebook</title>
+                                        <path
+                                            d="M18 1v16c0 .5-.4 1-1 1h-4.6v-7h2.3l.3-2.7h-2.7V6.6c0-.8.2-1.3 1.4-1.3h1.4V2.8c-.2 0-1.1-.1-2.1-.1-2 0-3.4 1.3-3.4 3.6v2H7.3V11h2.3v7H1c-.5 0-1-.4-1-1V1c0-.5.4-1 1-1h16c.6 0 1 .4 1 1z"
+                                            fill="rgba(255, 255, 255, 0.6)" fill-rule="evenodd"></path>
+                                    </svg></a></li>
+                            <li><a href="#"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 300 244" width="20">
+                                        <title>Twitter</title>
+                                        <path
+                                            d="M94.72 243.18c112.46 0 173.96-93.168 173.96-173.96 0-2.646-.054-5.28-.173-7.903a124.338 124.338 0 0 0 30.498-31.66c-10.955 4.87-22.744 8.147-35.11 9.625 12.622-7.569 22.313-19.543 26.885-33.817a122.62 122.62 0 0 1-38.824 14.841C240.8 8.422 224.916.99 207.327.99c-33.764 0-61.144 27.381-61.144 61.132 0 4.798.537 9.465 1.586 13.941-50.815-2.556-95.874-26.886-126.03-63.88a60.977 60.977 0 0 0-8.279 30.73c0 21.212 10.794 39.938 27.208 50.893a60.685 60.685 0 0 1-27.69-7.646c-.009.256-.009.506-.009.78 0 29.61 21.075 54.332 49.051 59.934a61.218 61.218 0 0 1-16.122 2.152c-3.933 0-7.766-.387-11.49-1.103 7.783 24.293 30.354 41.971 57.114 42.465-20.926 16.402-47.287 26.171-75.937 26.171-4.929 0-9.798-.28-14.584-.846 27.06 17.344 59.19 27.464 93.722 27.464"
+                                            fill="rgba(255, 255, 255, 0.6)"></path>
+                                    </svg></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </center>
+</body>
+
+</html>
